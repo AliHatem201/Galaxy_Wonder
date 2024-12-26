@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="default.css">
+  <link rel='stylesheet' href='navbar.css'>
+  <title>Galaxy Wonders - Sun</title>
+  <style>
+    .text-section h1 {
+      color: #283B77;
+    }
+    .text-section p {
+      color: #4260c0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+
+    <div class="logo" onclick="location.href='index.html'">
+        <img src="logo.png" alt="Logo">
+        <h2>GALAXY WONDER</h2>
+    </div>
+
+    <ul class="links">
+        <li><a href="planets_menu.html">Planets</a></li>
+        <li><a href="Milky_way.html">Milky Way</a></li>
+        <li><a href="Sun.html">Sun</a></li>
+        <li><a href="More.html">Sections</a></li>
+    </ul>
+    <a href="about_us.html" class="action_btn">About Us</a>
+    <div class="dropdown_menu">
+      <li><a href="planets_menu.html">Planets</a></li>
+      <li><a href="Milky_way.html">Milky Way</a></li>
+      <li><a href="Sun.html">Sun</a></li>
+      <li><a href="about_us.html" class="action_btn">About us</a></li>
+      <li><a href="More.html">Sections</a></li>
+  </div>
+    <div class="toggle_btn">
+        <img src="bars-solid-white.svg" alt="Dropdown Menu" class="toggle_img">
+    </div>
+    
+</div>
+
+  <div class="content">
+    <div class="text-section">
+      <h1>النجوم</h1>
+     <p>
+        النجوم هي أجسام سماوية ضخمة تتكون أساسًا من غازات شديدة الحرارة، وأهمها الهيدروجين والهيليوم. تشع النجوم الضوء والحرارة نتيجة التفاعلات النووية الحرارية التي تحدث في أنويتها. إليك بعض المعلومات الأساسية عن النجوم:
+        خصائص النجوم
+        اللون والحرارة:
+        لون النجم يعتمد على درجة حرارته. النجوم الزرقاء هي الأكثر حرارة، تليها النجوم البيضاء، ثم الصفراء (مثل الشمس)، وأخيرًا الحمراء التي تكون الأقل حرارة.
+        اللمعان:
+        يعتمد لمعان النجم على حجمه ودرجة حرارته. النجوم الأكبر حجمًا والأكثر حرارة تكون أكثر لمعانًا.
+        الحجم:
+        يختلف حجم النجوم بشكل كبير، من النجوم القزمة الصغيرة إلى النجوم العملاقة والعملاقة الفائقة.
+        العمر:
+        تمر النجوم بمراحل حياتية مختلفة:
+        النجوم الوليدة: تبدأ كغيوم من الغاز والغبار تُعرف بالسدم.
+        النجوم الناضجة: مثل الشمس، تحترق مستمرة بإنتاج الطاقة.
+        النجوم النهائية: تتحول إلى أقزام بيضاء، نجوم نيوترونية، أو ثقوب سوداء، بناءً على كتلتها.
+        أنواع النجوم
+        النجوم القزمة:
+        أصغر حجمًا وأقل لمعانًا من الشمس، مثل النجوم القزمة الحمراء.
+        النجوم العملاقة:        
+        أكبر من الشمس بكثير، وتكون شديدة اللمعان.
+        النجوم النيوترونية:
+        بقايا شديدة الكثافة لنجم انفجر في شكل مستعر أعظم.
+        الثقوب السوداء:
+        المرحلة النهائية لبعض النجوم الضخمة التي انهارت تحت تأثير جاذبيتها.
+        دورة حياة النجوم
+        التكوين:
+        تبدأ النجوم في السدم، وهي غيوم من الغاز والغبار في الفضاء.
+        النضج:
+        تستقر النجوم وتبدأ بتحويل الهيدروجين إلى هيليوم في عملية تُعرف بالاندماج النووي.
+        النهاية:
+        يعتمد مصير النجم على كتلته:
+        النجوم الصغيرة تتحول إلى أقزام بيضاء.
+        النجوم الكبيرة قد تنفجر في شكل مستعر أعظم وتترك وراءها نجمًا نيوترونيًا أو ثقبًا أسود.
+        أهمية النجوم
+        النجوم أساسية لتكوين العناصر الكيميائية الثقيلة مثل الكربون والأكسجين والحديد، التي تتشكل داخلها وتنتشر في الفضاء عبر الانفجارات النجمية.
+        تساهم في استقرار المجرة وتوزيع الضوء والطاقة فيها.
+    </p>
+    </div>
+    <div id="container3D"></div>
+  </div>
+
+  <script type="module" src="3d.js"></script>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleImg = document.querySelector('.toggle_img');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
+    
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open');
+    
+        if (dropDownMenu.classList.contains('open')) {
+            toggleImg.src = 'xmark-solid-white.svg';
+            toggleImg.style.width = '18px';
+        } else {
+            toggleImg.src = 'bars-solid-white.svg';
+            toggleImg.style.width = '21px';
+        }
+    }
+    </script>
+</body>
+</html>

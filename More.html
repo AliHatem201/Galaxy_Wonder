@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="planets_menu.css">
+    <link rel='stylesheet' href="navbar.css">
+    <title>Sections</title>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+    
+            <div class="logo" onclick="location.href='index.html'">
+                <img src="logo.png" alt="Logo">
+                <h2>GALAXY WONDER</h2>
+            </div>
+    
+            <ul class="links">
+                <li><a href="planets_menu.html">Planets</a></li>
+                <li><a href="Milky_way.html">Milky Way</a></li>
+                <li><a href="Sun.html">Sun</a></li>
+                <li><a href="More.html">Sections</a></li>
+            </ul>
+            <a href="about_us.html" class="action_btn">About Us</a>
+    
+            <div class="toggle_btn">
+                <img src="bars-solid-white.svg" alt="Dropdown Menu" class="toggle_img">
+            </div>
+            
+        </div>
+    
+        <div class="dropdown_menu">
+            <li><a href="planets_menu.html">Planets</a></li>
+            <li><a href="Milky_way.html">Milky Way</a></li>
+            <li><a href="Sun.html">Sun</a></li>
+            <li><a href="about_us.html" class="action_btn">About us</a></li>
+        </div>
+    </header>
+    <div class="container">
+        <div class="card">
+            <img src="download (2).jpg" alt="Stars">
+            <div class="content">
+                <h3>النجوم</h3>
+                <p>النجوم كرات غازية مضيئة تتكون أساسًا من الهيدروجين والهيليوم، وتنتج طاقتها عبر الاندماج النووي. تختلف في الحجم واللون والسطوع، ما يعكس درجة حرارتها وعمرها. تُصنف إلى نجوم قزمة وعملاقة وفائقة. تلعب النجوم دورًا رئيسيًا في تشكيل المجرات وتطور الكون، مثل شمسنا.</p>
+                <button  onclick="location.href='Nogom.html'">اعرف المزيد</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="download (3).jpg" alt="phokop">
+            <div class="content">
+                <h3>الثقوب</h3>
+                <p>الثقوب السوداء مناطق في الفضاء ذات جاذبية هائلة تمنع حتى الضوء من الهروب منها. تنشأ عند انهيار نجوم ضخمة بعد نفاد وقودها. أنواعها: ثقوب نجمية، فائقة الكتلة، ومتوسطة. تُحيطها أفق حدث يُحدد نقطة اللاعودة. تلعب دورًا مهمًا في تشكيل المجرات وفهم الظواهر الكونية.</p>
+                <button onclick="location.href='phokop.html'">اعرف المزيد</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="download (4).jpg" alt="Kowakebat">
+            <div class="content">
+                <h3>الكويكبات</h3>
+                <p>الكويكبات أجسام صخرية صغيرة تدور حول الشمس، معظمها يوجد في حزام الكويكبات بين المريخ والمشتري. تتفاوت في الحجم من بضعة أمتار إلى مئات الكيلومترات. بعضها يقترب من الأرض، مما يجعله محور دراسة لرصد التصادمات المحتملة. تُعتبر بقايا من تكوين النظام الشمسي قبل 4.6 مليار سنة.</p>
+                <button onclick="location.href='Kowakebat.html'">اعرف المزيد</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="download (1).jpg" alt="mgarat">
+            <div class="content">
+                <h3>مجرات</h3>
+                <p>المجرات هي تجمعات ضخمة من النجوم والغاز والغبار والمادة المظلمة، ترتبط بفعل الجاذبية. أنواعها تشمل الحلزونية، الإهليلجية، وغير المنتظمة. تحتوي على مليارات النجوم والكواكب، مثل مجرة درب التبانة التي تضم نظامنا الشمسي. تتحرك المجرات بفعل التوسع الكوني وتُعد أساس الكون المرئي.</p>
+                <button onclick="location.href='mgarat.html'">اعرف المزيد</button>
+        </div>
+    </div>
+
+        <div class="card">
+                <img src="meteors.png" alt="mgarat">
+                <div class="content">
+                    <h3>الشهب</h3>
+                    <p>الشهب هي جزيئات صغيرة من الفضاء، مثل الغبار أو الحصى، تدخل الغلاف الجوي للأرض بسرعة عالية. نتيجة الاحتكاك بالهواء، تشتعل هذه الجزيئات وتظهر كخطوط مضيئة في السماء. يمكن مشاهدة الشهب خلال الزخات الشهابية السنوية مثل البرشاويات والجباريات، وهي ظاهرة فلكية جميلة يعشقها الكثيرون.</p>
+                    <button onclick="location.href='Meteors.html'">اعرف المزيد</button>
+                </div>
+        </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleImg = document.querySelector('.toggle_img');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+        
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open');
+        
+            if (dropDownMenu.classList.contains('open')) {
+                toggleImg.src = 'Assets/xmark-solid-white.svg';
+                toggleImg.style.width = '18px';
+            } else {
+                toggleImg.src = 'Assets/bars-solid-white.svg';
+                toggleImg.style.width = '21px';
+            }
+        }
+    </script>
+</body>
+</html>

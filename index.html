@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Wonders</title>
+    <link rel='stylesheet' href='styles.css'>
+    <link rel='stylesheet' href='navbar.css'>
+    <style>
+    .text-section h1 {
+      color: #dab063;
+    }
+    .text-section p {
+      color: #dab571;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <div class="navbar">
+
+        <div class="logo" onclick="location.href='index.html'">
+            <img src="logo.png" alt="Logo">
+            <h2>GALAXY WONDER</h2>
+        </div>
+
+        <ul class="links">
+            <li><a href="planets_menu.html">Planets</a></li>
+            <li><a href="Milky_way.html">Milky Way</a></li>
+            <li><a href="sun.html">Sun</a></li>
+            <li><a href="More.html">Sections</a></li>
+        </ul>
+        <a href="about_us.html" class="action_btn">About Us</a>
+
+        <div class="toggle_btn">
+            <img src="bars-solid-white.svg" alt="Dropdown Menu" class="toggle_img">
+        </div>
+        
+    </div>
+
+    <div class="dropdown_menu">
+        <li><a href="planets_menu.html">Planets</a></li>
+        <li><a href="Milky_way.html">Milky Way</a></li>
+        <li><a href="sun.html">Sun</a></li>
+        <li><a href="about_us.html" class="action_btn">About us</a></li>
+        <li><a href="More.html">Sections</a></li>
+    </div>
+</header>
+
+<div class="main-content">
+    <h1>Galaxy Wonders</h1>
+    <p>مرحبًا بكم في موقعنا، بوابتكم لاستكشاف الكون! هدفنا هو توفير أحدث المعلومات عن الكواكب والنجوم والمجرات، إلى جانب مقالات علمية مثيرة وصور مذهلة وفيديوهات تأخذكم في رحلة لاكتشاف أسرار الفضاء. نسعى لتعزيز فهمنا للكون ومساعدة الجميع على استكشاف جمال وعظمة العوالم الأخرى. انضموا إلينا في رحلة عبر النجوم، حيث يلتقي العلم بالفضول لاكتشاف ما وراء الأرض.
+    </p>
+</div>
+
+<div class="container">
+<div class="card">
+    <img src="planets.jpg" alt="Planets">
+    <div class="card-content">
+      <h3>الكواكب</h3>
+      <p>الكواكب هي أجسام سماوية تدور حول النجوم، بما في ذلك شمسنا...</p>
+      <button onclick="location.href='planets_menu.html'">اعرف المزيد</button>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <img src="Sun_2.jpg" alt="Sun">
+    <div class="card-content">
+      <h3>الشمس</h3>
+      <p>الشمس هي النجم الذي تدور حوله الكواكب في نظامنا الشمسي...</p>
+      <button onclick="location.href='Sun.html'">اعرف المزيد</button>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <img src="Milky_way_2.jpg" alt="Milky way">
+    <div class="card-content">
+      <h3>درب التبانة</h3>
+      <p>درب التبانة هي المجرة التي تحتوي على نظامنا الشمسي، وتضم مليارات النجوم والكواكب...
+      </p>
+      <button onclick="location.href='Milky_way.html'">اعرف المزيد</button>
+    </div>
+  </div>
+  
+    <!-- Card 4 -->
+    <div class="card">
+     <img src="Moon.jpg" alt="Moon">
+     <div class="card-content">
+       <h3>القمر</h3>
+       <p>الأقمار هي أجسام سماوية تدور حول كواكب أو كويكبات في الفضاء، وتختلف في حجمها وتركيبها...</p>
+       <button onclick="location.href='Moons.html'">اعرف المزيد</button>
+    </div>
+ </div>
+</div>
+
+<script>
+const toggleBtn = document.querySelector('.toggle_btn');
+const toggleImg = document.querySelector('.toggle_img');
+const dropDownMenu = document.querySelector('.dropdown_menu');
+
+toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open');
+
+    if (dropDownMenu.classList.contains('open')) {
+        toggleImg.src = 'xmark-solid-white.svg';
+        toggleImg.style.width = '18px';
+    } else {
+        toggleImg.src = 'bars-solid-white.svg';
+        toggleImg.style.width = '21px';
+    }
+}
+</script>
+</body>
+</html>

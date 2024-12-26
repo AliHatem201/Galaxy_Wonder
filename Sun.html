@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="default.css">
+  <link rel='stylesheet' href='navbar.css'>
+  <title>Galaxy Wonders - Sun</title>
+  <style>
+    .text-section h1 {
+      color: #EF8700;
+    }
+    .text-section p {
+      color: #F6900B;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+
+    <div class="logo" onclick="location.href='index.html'">
+        <img src="logo.png" alt="Logo">
+        <h2>GALAXY WONDER</h2>
+    </div>
+
+    <ul class="links">
+        <li><a href="planets_menu.html">Planets</a></li>
+        <li><a href="Milky_way.html">Milky Way</a></li>
+        <li><a href="Sun.html">Sun</a></li>
+        <li><a href="More.html">Sections</a></li>
+    </ul>
+    <a href="about_us.html" class="action_btn">About Us</a>
+    <div class="dropdown_menu">
+      <li><a href="planets_menu.html">Planets</a></li>
+      <li><a href="Milky_way.html">Milky Way</a></li>
+      <li><a href="Sun.html">Sun</a></li>
+      <li><a href="about_us.html" class="action_btn">About us</a></li>
+      <li><a href="More.html">Sections</a></li>
+  </div>
+    <div class="toggle_btn">
+        <img src="bars-solid-white.svg" alt="Dropdown Menu" class="toggle_img">
+    </div>
+    
+</div>
+
+  <div class="content">
+    <div class="text-section">
+      <h1>الشمس</h1>
+      <p>
+        الشمس هي النجم المركزي لنظامنا الشمسي والمصدر الأساسي للطاقة للحياة على الأرض. إنها كرة ضخمة من الغاز الساخن، تتكون بشكل أساسي من الهيدروجين (حوالي 74٪) والهيليوم (حوالي 24٪)، مع كميات ضئيلة من العناصر الأخرى. تحافظ قوة الجاذبية الهائلة للشمس على الكواكب والأقمار والكويكبات والمذنبات في مداراتها. يبلغ قطر الشمس حوالي 1.39 مليون كيلومتر، مما يجعلها أوسع من الأرض بحوالي 109 مرات. تشكل حوالي 99.86٪ من الكتلة الكلية للنظام الشمسي. على الرغم من حجمها، تصنف الشمس على أنها نجم تسلسل رئيسي من النوع G، أو قزم أصفر، وتعتبر نجمًا متوسطًا مقارنة بغيرها في الكون. يتم إنتاج الطاقة في قلب الشمس من خلال الاندماج النووي، حيث تندمج ذرات الهيدروجين لتكوين الهيليوم، مما يؤدي إلى إطلاق كميات هائلة من الطاقة. تنتقل هذه الطاقة إلى الخارج عبر طبقات الشمس ثم تشع في النهاية إلى الفضاء على شكل ضوء وحرارة. يستغرق ضوء الشمس حوالي 8 دقائق ليقطع مسافة 150 مليون كيلومتر (93 مليون ميل) إلى الأرض. تبلغ درجة حرارة سطح الشمس أو الغلاف الضوئي حوالي 5500 درجة مئوية (9932 درجة فهرنهايت)، بينما تتجاوز درجة حرارة اللب 15 مليون درجة مئوية (27 مليون درجة فهرنهايت). يحيط بالشمس الهالة، وهي غلاف جوي خارجي ساخن يمكن رؤيته أثناء كسوف الشمس. تبلغ عمر الشمس حوالي 4.6 مليار سنة، وهي في منتصف دورة حياتها. في حوالي 5 مليارات سنة، ستتمدد إلى عملاق أحمر ثم تنكمش لاحقًا إلى قزم أبيض، مما يشير إلى نهاية دورة حياتها.</p>
+    </div>
+    <div id="container3D"></div>
+  </div>
+
+  <script type="module" src="3d.js"></script>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleImg = document.querySelector('.toggle_img');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
+    
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open');
+    
+        if (dropDownMenu.classList.contains('open')) {
+            toggleImg.src = 'xmark-solid-white.svg';
+            toggleImg.style.width = '18px';
+        } else {
+            toggleImg.src = 'bars-solid-white.svg';
+            toggleImg.style.width = '21px';
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="default.css">
+  <link rel='stylesheet' href='navbar.css'>
+  <title>Galaxy Wonders - Sun</title>
+  <style>
+    .text-section h1 {
+      color: #E5CFB7;
+    }
+    .text-section p {
+      color: #f7dabb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+
+    <div class="logo" onclick="location.href='index.html'">
+        <img src="logo.png" alt="Logo">
+        <h2>GALAXY WONDER</h2>
+    </div>
+
+    <ul class="links">
+        <li><a href="planets_menu.html">Planets</a></li>
+        <li><a href="Milky_way.html">Milky Way</a></li>
+        <li><a href="Sun.html">Sun</a></li>
+        <li><a href="More.html">Sections</a></li>
+    </ul>
+    <a href="about_us.html" class="action_btn">About Us</a>
+
+    <div class="toggle_btn">
+        <img src="bars-solid-white.svg" alt="Dropdown Menu" class="toggle_img">
+    </div>
+    <div class="dropdown_menu">
+      <li><a href="planets_menu.html">Planets</a></li>
+      <li><a href="Milky_way.html">Milky Way</a></li>
+      <li><a href="Sun.html">Sun</a></li>
+      <li><a href="about_us.html" class="action_btn">About us</a></li>
+      <li><a href="More.html">Sections</a></li>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="text-section">
+      <h1>المجارات</h1>
+     <p>
+        المجرة هي تجمع هائل من النجوم والغاز والغبار والمادة المظلمة، ترتبط معًا بفعل الجاذبية. تحتوي المجرات على مليارات النجوم، وقد تضم أنظمة شمسية وكواكب، وتتنوع في أحجامها وأشكالها.
+        أنواع المجرات:
+        المجرات الإهليلجية (Elliptical Galaxies):
+        ذات شكل بيضاوي أو كروي.
+        تحتوي على نجوم قديمة جدًا وتفتقر للغبار والغاز الكافي لتشكيل نجوم جديدة.
+        أمثلة: M87.
+        المجرات الحلزونية (Spiral Galaxies):
+        تشبه القرص وتحتوي على أذرع ملتفة حول مركز مضيء.
+        تضم نجومًا جديدة في الأذرع، بينما تتركز النجوم القديمة في المركز.
+        مثال: مجرة درب التبانة (Milky Way)، مجرة أندروميدا.
+        المجرات غير المنتظمة (Irregular Galaxies):
+        لا تمتلك شكلاً محددًا.
+        مليئة بالغاز والغبار وتُعتبر مناطق نشطة لتكوين النجوم.
+        أمثلة: Large Magellanic Cloud.
+        المجرات العدسية (Lenticular Galaxies):
+        مزيج بين الإهليلجية والحلزونية.
+        لها قرص مركزي لكنها تفتقر للأذرع الواضحة.
+        أشهر المجرات:
+        مجرة درب التبانة (Milky Way):
+        مجرتنا، تحتوي على مئات المليارات من النجوم.
+        قطرها حوالي 100,000 سنة ضوئية.
+        مجرة أندروميدا (Andromeda):
+        أقرب مجرة كبيرة إلى مجرتنا، تبعد حوالي 2.5 مليون سنة ضوئية.
+        المجرة ثلاثية الأبعاد (Triangulum Galaxy):
+        مجرة صغيرة قريبة من أندروميدا ودرب التبانة.
+        خصائص المجرات:
+        الحجم:
+        يتراوح قطر المجرات من بضعة آلاف إلى مئات الآلاف من السنين الضوئية.
+        المحتوى:
+        تحتوي على النجوم، الكواكب، السدم، الثقوب السوداء، والمادة المظلمة.
+        الحركة:
+        المجرات تتحرك وتتباعد بفعل التوسع الكوني الناتج عن الانفجار العظيم.
+        حقائق مذهلة:
+        يقدر عدد المجرات في الكون المرئي بـ مئات المليارات.
+        بعض المجرات تصطدم ببعضها وتندمج لتشكيل مجرات أكبر.
+        الثقوب السوداء الهائلة تقع في مراكز معظم المجرات.
+        المجرات تشكل الأساس لفهم الكون الكبير ومكانتنا فيه!        
+     </p>
+    </div>
+    <div id="container3D"></div>
+  </div>
+
+  <script type="module" src="3d.js"></script>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleImg = document.querySelector('.toggle_img');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
+    
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open');
+    
+        if (dropDownMenu.classList.contains('open')) {
+            toggleImg.src = 'xmark-solid-white.svg';
+            toggleImg.style.width = '18px';
+        } else {
+            toggleImg.src = 'bars-solid-white.svg';
+            toggleImg.style.width = '21px';
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="about_us.css">
+  <link rel="stylesheet" href="navbar.css">
+  <title>Galaxy Wonders - About us</title>
+  </style>
+</head>
+<body>
+
+  
+  <div class="navbar">
+
+    <div class="logo" onclick="location.href='index.html'">
+        <img src="logo.png" alt="Logo">
+        <h2>GALAXY WONDER</h2>
+    </div>
+
+    <ul class="links">
+        <li><a href="planets_menu.html">Planets</a></li>
+        <li><a href="Milky_way.html">Milky Way</a></li>
+        <li><a href="sun.html">Sun</a></li>
+        <li><a href="More.html">Sections</a></li>
+    </ul>
+    <a href="about_us.html" class="action_btn">About Us</a>
+
+    <div class="toggle_btn">
+        <img src="bars-solid-white.svg" alt="Dropdown Menu" class="toggle_img">
+    </div>
+    <div class="dropdown_menu">
+      <li><a href="planets_menu.html">Planets</a></li>
+      <li><a href="Milky_way.html">Milky Way</a></li>
+      <li><a href="sun.html">Sun</a></li>
+      <li><a href="about_us.html" class="action_btn">About us</a></li>
+      <li><a href="More.html">Sections</a></li>
+  </div>
+</div>
+
+<div class="container-au"> <!--au -> about us-->
+
+  <div class="card-au">
+    <img src="george.jpg" alt="George" class="img1">
+    <h5>Name</h5>
+    <p>George Sameh Azmy</p>
+    <h5>Email</h5>
+    <p>george-sameh@outlook.com</p>
+    <h5>Phone Number</h5>
+    <p>01281618507</p>
+  </div>
+
+  <!-- <hr> -->
+
+  <div class="card-au">
+    <img src="ali.jpg" alt="Ali" class="img2">
+    <h5>Name</h5>
+    <p>Ali Hatem Sayed</p>
+    <h5>Email</h5>
+    <p>3li.hatem.1999@gmail.com</p>
+    <h5>Phone Number</h5>
+    <p>01050882203</p>
+  </div>
+
+</div>
+
+<script>
+  const toggleBtn = document.querySelector('.toggle_btn');
+const toggleImg = document.querySelector('.toggle_img');
+const dropDownMenu = document.querySelector('.dropdown_menu');
+
+toggleBtn.onclick = function () {
+  dropDownMenu.classList.toggle('open');
+
+  if (dropDownMenu.classList.contains('open')) {
+      toggleImg.src = 'xmark-solid-white.svg';
+      toggleImg.style.width = '18px';
+  } else {
+      toggleImg.src = 'bars-solid-white.svg';
+      toggleImg.style.width = '21px';
+  }
+}
+</script>
+</body>
+</html>

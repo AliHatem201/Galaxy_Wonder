@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="default.css">
+  <link rel='stylesheet' href='navbar.css'>
+  <title>Galaxy Wonders - Sun</title>
+  <style>
+    .text-section h1 {
+      color: #C77A5B;
+    }
+    .text-section p {
+      color: #f3946f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+
+    <div class="logo" onclick="location.href='index.html'">
+        <img src="logo.png" alt="Logo">
+        <h2>GALAXY WONDER</h2>
+    </div>
+
+    <ul class="links">
+        <li><a href="planets_menu.html">Planets</a></li>
+        <li><a href="Milky_way.html">Milky Way</a></li>
+        <li><a href="Sun.html">Sun</a></li>
+        <li><a href="More.html">Sections</a></li>
+    </ul>
+    <div class="dropdown_menu">
+      <li><a href="planets_menu.html">Planets</a></li>
+      <li><a href="Milky_way.html">Milky Way</a></li>
+      <li><a href="Sun.html">Sun</a></li>
+      <li><a href="about_us.html" class="action_btn">About us</a></li>
+      <li><a href="More.html">Sections</a></li>
+  </div>
+    <a href="about_us.html" class="action_btn">About Us</a>
+
+    <div class="toggle_btn">
+        <img src="bars-solid-white.svg" alt="Dropdown Menu" class="toggle_img">
+    </div>
+    
+</div>
+
+  <div class="content">
+    <div class="text-section">
+      <h1>الثقوب</h1>
+     <p>
+        1. الثقوب السوداء (Black Holes):
+        ما هي؟
+        الثقوب السوداء هي مناطق في الفضاء ذات جاذبية هائلة بحيث لا يستطيع حتى الضوء الهروب منها. تتكون عندما تنهار النجوم الضخمة في نهاية دورة حياتها.
+        أنواع الثقوب السوداء:
+        الثقوب السوداء النجمية: تنشأ من انهيار النجوم.
+        الثقوب السوداء فائقة الكتلة: توجد في مراكز المجرات، مثل الثقب الأسود "ساجيتاريوس أ*" في مركز مجرتنا.
+        الثقوب السوداء الصغيرة: نظريًا أصغر حجمًا، قد تكون تشكلت في بدايات الكون.
+        آلية العمل:
+        أي جسم يقترب من الثقب الأسود يتعرض لقوى جاذبية هائلة تتسبب في تمدده وتفكيكه، وهي ظاهرة تعرف بـ"تمزق المد والجزر" (Spaghettification).
+        أفق الحدث (Event Horizon):
+        حدود الثقب الأسود حيث تفقد الأجسام القدرة على الهروب.
+        2. الثقوب الدودية (Wormholes):
+        ما هي؟
+        نظريًا، الثقوب الدودية هي ممرات في الزمكان تربط بين نقطتين مختلفتين في الكون. لم تُكتشف بعد، لكنها تعتمد على حلول معادلات النسبية العامة لأينشتاين.
+        أهميتها:
+        يُعتقد أنها قد تسمح بالسفر عبر الزمن أو بين المجرات في وقت قصير جدًا، لكن وجودها الفعلي يظل غير مؤكد.
+        أهمية الثقوب في الفضاء:
+        الثقوب السوداء تعتبر مختبرًا طبيعيًا لدراسة قوانين الفيزياء في ظل ظروف متطرفة.
+        قد تساعد الثقوب الدودية إذا كانت موجودة في تطوير فهمنا للسفر بين النجوم.
+        طرق دراستها:
+        أدوات الرصد:
+        العلماء يعتمدون على التلسكوبات التي ترصد الأشعة السينية وأمواج الجاذبية الناتجة عن تصادم الثقوب السوداء.
+        التصوير:
+        أول صورة مباشرة لثقب أسود تم التقاطها عام 2019 بواسطة مشروع "تلسكوب أفق الحدث" (EHT).
+        حقائق ممتعة:
+        يمكن للثقوب السوداء أن تكون بحجم الذرة لكنها تحتوي على كتلة هائلة جدًا.
+        الثقوب السوداء ليست "ثقوبًا" بالمعنى الحرفي، لكنها مناطق كثيفة للغاية من المادة.
+     </p>
+    </div>
+    <div id="container3D"></div>
+  </div>
+
+  <script type="module" src="3d.js"></script>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleImg = document.querySelector('.toggle_img');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
+    
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open');
+    
+        if (dropDownMenu.classList.contains('open')) {
+            toggleImg.src = 'xmark-solid-white.svg';
+            toggleImg.style.width = '18px';
+        } else {
+            toggleImg.src = 'bars-solid-white.svg';
+            toggleImg.style.width = '21px';
+        }
+    }
+    </script>
+</body>
+</html>
