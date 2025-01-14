@@ -11,7 +11,7 @@ body {
   font-family: Arial, sans-serif;
   color: white;
   background: linear-gradient(to bottom, #003366, #004466);
-  background-image: url("Background.jpg");
+  background-image: url("Background.png");
   background-size: cover;
   background-position: center;
   /* background-color: #0b0c0f; */
